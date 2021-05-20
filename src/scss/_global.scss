@@ -4,6 +4,9 @@
   }
 
   :root {
-      font-family: 'San Francisco';
-      background: #f5f5f5;
+      background: $background;
+  }
+
+  body {
+    font-family: 'San Francisco';
   }
