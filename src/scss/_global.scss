@@ -8,6 +8,7 @@
     background: $background;
   }
 
+  //CONTAINER PRA CONTEUDO DE FORMS
   .container-wrap{
     background: $branco;
     margin: 15px;
@@ -16,6 +17,7 @@
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
   }
 
+  //TOOLTIP PERSONALIZADO
   .tooltip-right {
     position: relative;
     display: inline-block;
@@ -30,8 +32,8 @@
       visibility: hidden;
       min-width: 150px;
       max-width: 300px;
-      background-color: $azul-claro;
-      color: #055160;
+      background-color: $cinza;
+      color: $branco;
       text-align: center;
       border-radius: 6px;
       padding: 5px 0;
@@ -49,7 +51,7 @@
         margin-top: -5px;
         border-width: 5px;
         border-style: solid;
-        border-color: transparent transparent transparent $azul-claro;
+        border-color: transparent transparent transparent $cinza;
       }
 
     }

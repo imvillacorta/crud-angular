@@ -1,8 +1,17 @@
 .table {
+    th {
+        font-weight: bold;
+        color: $cinza;
+        font-size: 19px;
+    }
     tr {
         border: none;
     }
     td {
         border: none;
     }
+}
+
+.table > :not(caption) > * > *{
+    border-bottom-width: 0;
 }

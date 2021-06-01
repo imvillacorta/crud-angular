@@ -1,0 +1,20 @@
+.card-mobile {
+    display: none;
+}
+
+.table-desktop {
+    display: none;
+}
+
+@media (max-width: 786px){
+    .card-mobile {
+        display: block;
+    }
+}
+
+@media (min-width: 1024px){
+    .table-desktop {
+        display: block;
+    }
+}
+

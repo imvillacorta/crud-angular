@@ -1,19 +1,19 @@
 <div class="container-wrap">
-    <div class="d-flex justify-content-between align-items-center">
+    <div class="d-flex justify-content-between align-items-center mb-2">
         <div>
             <h4>Usuários</h4>
             <h6>Gerencie os usuários cadastrados na lista abaixo.</h6>
         </div>
         <div>
             <button type="button"
-                    class="btn btn-primary tooltip-right">
+                    class="btn btn-success tooltip-right">
                 <span class="tooltip-text">Cadastrar Usuário</span>
                 <i class="fas fa-user-plus mr-2"></i>
             </button>
         </div>
     </div>
-    <div>
-        <table class="table table-striped">
+    <div class="table-desktop">
+        <table class="table table-striped ">
             <thead>
                 <tr>
                     <th>Nome</th>
@@ -23,31 +23,56 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>Ivan Villacorta</td>
-                    <td>392.933.168-38</td>
-                    <td>ivan_mv23@hotmail.com</td>
-                    <td>Ações</td>
-                </tr>
-                <tr>
-                    <td>Ivan Villacorta</td>
-                    <td>392.933.168-38</td>
-                    <td>ivan_mv23@hotmail.com</td>
-                    <td>Ações</td>
-                </tr>
-                <tr>
-                    <td>Ivan Villacorta</td>
-                    <td>392.933.168-38</td>
-                    <td>ivan_mv23@hotmail.com</td>
-                    <td>Ações</td>
-                </tr>
-                <tr>
-                    <td>Ivan Villacorta</td>
-                    <td>392.933.168-38</td>
-                    <td>ivan_mv23@hotmail.com</td>
-                    <td>Ações</td>
+                <tr *ngFor="let usuario of usuarios">
+                    <td>{{usuario.nome}}</td>
+                    <td>{{usuario.cpf}}</td>
+                    <td>{{usuario.email}}</td>
+                    <td>
+                        <button class="btn btn-secondary tooltip-right">
+                            <span class="tooltip-text">Visualizar</span>
+                            <i class="far fa-eye"></i>
+                        </button>
+                        <button class="btn btn-primary mx-2 tooltip-right">
+                            <span class="tooltip-text">Editar</span>
+                            <i class="far fa-edit"></i>
+                        </button>
+                        <button class="btn btn-danger tooltip-right">
+                            <span class="tooltip-text">Excluir</span>
+                            <i class="far fa-trash-alt"></i>
+                        </button>
+                    </td>
                 </tr>
             </tbody>
         </table>
+    </div>
+
+    <div class="card mb-3 card-mobile" *ngFor="let usuario of usuarios">
+        <div class="card-header">
+            {{usuario.nome}}
+        </div>
+        <div class="card-body">
+            <div class="card-text mb-2">
+                <div>
+                    <b>CPF : </b>
+                    <span>{{usuario.cpf}}</span>
+                </div>
+                <div>
+                    <b>E-mail : </b>
+                    <span>{{usuario.nome}}</span>
+                </div>
+            </div>
+            <button class="btn btn-secondary tooltip-right">
+                <span class="tooltip-text">Visualizar</span>
+                <i class="far fa-eye"></i>
+            </button>
+            <button class="btn btn-primary mx-2 tooltip-right">
+                <span class="tooltip-text">Editar</span>
+                <i class="far fa-edit"></i>
+            </button>
+            <button class="btn btn-danger tooltip-right">
+                <span class="tooltip-text">Excluir</span>
+                <i class="far fa-trash-alt"></i>
+            </button>
+        </div>
     </div>
 </div>
