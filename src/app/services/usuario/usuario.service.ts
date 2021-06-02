@@ -12,6 +12,11 @@ export class UsuarioService {
     private http: HttpClient
   ) { }
 
+  obterUsuarios() {
+    return this.http.get<any>(
+      `${environment.urlApi}/usuarios`);
+  }
+
   criar(usuario: any) {
     return this.http.post<any>(
       `${environment.urlApi}/usuarios`,

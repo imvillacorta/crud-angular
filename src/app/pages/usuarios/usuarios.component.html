@@ -25,9 +25,9 @@
             </thead>
             <tbody>
                 <tr *ngFor="let usuario of usuarios">
-                    <td>{{usuario.nome}}</td>
-                    <td>{{usuario.cpf}}</td>
-                    <td>{{usuario.email}}</td>
+                    <td>{{ usuario.nome }}</td>
+                    <td>{{ usuario.cpf | mask: '000.000.000-00' }}</td>
+                    <td>{{ usuario.email }}</td>
                     <td>
                         <button class="btn btn-secondary tooltip-right">
                             <span class="tooltip-text">Visualizar</span>
@@ -60,7 +60,7 @@
                 </div>
                 <div>
                     <b>E-mail : </b>
-                    <span>{{usuario.nome}}</span>
+                    <span>{{usuario.email}}</span>
                 </div>
             </div>
             <button class="btn btn-secondary tooltip-right">
