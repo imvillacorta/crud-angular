@@ -1,0 +1,38 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "nome": "Angelica Villacorta",
+      "cpf": "39293316837",
+      "email": "angelica@hotmail.com",
+      "endereco": [
+        {
+          "cep": "02211050",
+          "rua": "Rua Igarai",
+          "numero": "212",
+          "complemento": "Casa",
+          "bairro": "Vila Guilherme",
+          "cidade": "São Paulo",
+          "estado": "SP"
+        }
+      ]
+    },
+    {
+      "nome": "Ivan Villacorta",
+      "cpf": "39293316838",
+      "email": "ivan_mv23@hotmail.com",
+      "endereco": [
+        {
+          "cep": "04184000",
+          "rua": "Rua Professor Arnaldo João Semeraro",
+          "numero": "871",
+          "complemento": "AP 64 - Bloco 4 - Condominio Santa Fernanda",
+          "bairro": "Jardim Santa Emília",
+          "cidade": "São Paulo",
+          "estado": "SP"
+        }
+      ],
+      "id": 2
+    }
+  ]
+}

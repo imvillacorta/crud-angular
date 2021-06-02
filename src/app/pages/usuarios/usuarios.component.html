@@ -6,7 +6,8 @@
         </div>
         <div>
             <button type="button"
-                    class="btn btn-success tooltip-right">
+                    class="btn btn-success tooltip-right"
+                    routerLink="/cadastrar">
                 <span class="tooltip-text">Cadastrar Usuário</span>
                 <i class="fas fa-user-plus mr-2"></i>
             </button>
@@ -46,7 +47,8 @@
         </table>
     </div>
 
-    <div class="card mb-3 card-mobile" *ngFor="let usuario of usuarios">
+    <div class="card mb-3 card-mobile"
+         *ngFor="let usuario of usuarios">
         <div class="card-header">
             {{usuario.nome}}
         </div>
