@@ -13,7 +13,15 @@
             </button>
         </div>
     </div>
-    <div class="table-desktop">
+
+    <div class="alert alert-info"
+         *ngIf="!usuarios.length"
+         role="alert">
+        Nenhum usuário cadastrado.
+    </div>
+
+    <div class="table-desktop"
+         *ngIf="usuarios.length">
         <table class="table table-striped ">
             <thead>
                 <tr>
@@ -47,34 +55,36 @@
         </table>
     </div>
 
-    <div class="card mb-3 card-mobile"
-         *ngFor="let usuario of usuarios">
-        <div class="card-header">
-            {{usuario.nome}}
-        </div>
-        <div class="card-body">
-            <div class="card-text mb-2">
-                <div>
-                    <b>CPF : </b>
-                    <span>{{usuario.cpf}}</span>
-                </div>
-                <div>
-                    <b>E-mail : </b>
-                    <span>{{usuario.email}}</span>
-                </div>
+    <div *ngIf="usuarios.length">
+        <div class="card mb-3 card-mobile"
+             *ngFor="let usuario of usuarios">
+            <div class="card-header">
+                {{usuario.nome}}
             </div>
-            <button class="btn btn-secondary tooltip-right">
-                <span class="tooltip-text">Visualizar</span>
-                <i class="far fa-eye"></i>
-            </button>
-            <button class="btn btn-primary mx-2 tooltip-right">
-                <span class="tooltip-text">Editar</span>
-                <i class="far fa-edit"></i>
-            </button>
-            <button class="btn btn-danger tooltip-right">
-                <span class="tooltip-text">Excluir</span>
-                <i class="far fa-trash-alt"></i>
-            </button>
+            <div class="card-body">
+                <div class="card-text mb-2">
+                    <div>
+                        <b>CPF : </b>
+                        <span>{{usuario.cpf}}</span>
+                    </div>
+                    <div>
+                        <b>E-mail : </b>
+                        <span>{{usuario.email}}</span>
+                    </div>
+                </div>
+                <button class="btn btn-secondary tooltip-right">
+                    <span class="tooltip-text">Visualizar</span>
+                    <i class="far fa-eye"></i>
+                </button>
+                <button class="btn btn-primary mx-2 tooltip-right">
+                    <span class="tooltip-text">Editar</span>
+                    <i class="far fa-edit"></i>
+                </button>
+                <button class="btn btn-danger tooltip-right">
+                    <span class="tooltip-text">Excluir</span>
+                    <i class="far fa-trash-alt"></i>
+                </button>
+            </div>
         </div>
     </div>
 </div>
