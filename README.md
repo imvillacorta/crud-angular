@@ -1,27 +1,34 @@
-# CrudAngular
+# Crud com Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.12.
+Este projeto foi desenvolvido com Angular versão 12
 
-## Development server
+## Pré requisitos
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- Instalar [NodeJS](https://nodejs.org/en/)
+- Instalar [Angular](https://angular.io/guide/setup-local)
+- Instalar [JSON Server](https://www.linkedin.com/pulse/apis-fakes-com-json-server-ivan-villacorta/) - o link encaminha para um artigo que escrevi explicando um pouco mais da instalação e como podemos usar o JSON Server.
 
-## Code scaffolding
+## Executando o projeto
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### - Instalando as dependências
 
-## Build
+Após clonar o projeto é preciso instalar as dependências, o projeto final esta na branch 'main', use o seguinte comando para instalar as dependências:
+```
+npm i
+```
+### - Executando as API's
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+As API`s foram criadas usando JSON Server e devem ser executadas durante todo o processo em que a aplicação estiver rodando.
+Para isso abra o projeto no terminal de sua preferência e rode o seguinte comando:
+```
+json-server --watch db.json
+```
 
-## Running unit tests
+### - Executando o front end
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Para rodar a aplicação use o seguinte comando:
+```
+ng serve
+```
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Feito isso navegue para http://localhost:4200
