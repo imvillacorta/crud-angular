@@ -14,7 +14,15 @@ const routes: Routes = [
     component: UsuariosComponent,
   },
   {
-    path: 'cadastrar',
+    path: 'usuarios/cadastrar',
+    component: UsuarioComponent,
+  },
+  {
+    path: 'usuarios/editar/:id',
+    component: UsuarioComponent,
+  },
+  {
+    path: 'usuarios/visualizar/:id',
     component: UsuarioComponent,
   }
 ];

@@ -17,25 +17,23 @@ export class UsuarioService {
       `${environment.urlApi}/usuarios`);
   }
 
-  criar(usuario: any) {
+  obterUsuarioPorId(id: any) {
+    return this.http.get<any>(
+      `${environment.urlApi}/usuarios/${id}`);
+  }
+
+  criarUsuario(dadosUsuario: any) {
     return this.http.post<any>(
-      `${environment.urlApi}/usuarios`,
-      {
-        nome: usuario.value.nome,
-        cpf: usuario.value.cpf,
-        email: usuario.value.email,
-        endereco: [
-          {
-            cep: usuario.value.cep,
-            rua: usuario.value.endereco,
-            numero: usuario.value.numero,
-            complemento: usuario.value.complemento,
-            bairro: usuario.value.bairro,
-            cidade: usuario.value.cidade,
-            estado: usuario.value.estado
-          }
-        ]
-      }
-    );
+      `${environment.urlApi}/usuarios`, dadosUsuario);
+  }
+
+  editarUsuario(id: any, dadosUsuario: any) {
+    return this.http.put<any>(
+      `${environment.urlApi}/usuarios/${id}`, dadosUsuario);
+  }
+
+  excluirUsuario(id: any) {
+    return this.http.delete(
+      `${environment.urlApi}/usuarios/${id}`);
   }
 }

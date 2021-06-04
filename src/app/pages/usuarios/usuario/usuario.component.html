@@ -3,8 +3,13 @@
 
     <div class="container-wrap">
         <div class="mb-4">
-            <h4>Cadastrar Usuário</h4>
-            <h6>Preencha os campos abaixo para cadastrar seus dados.</h6>
+            <h4>
+                {{isEdit ? 'Editar Usuário' : isReadOnly ? 'Visualizar Usuário' : 'Cadastrar Usuário'}}
+            </h4>
+            <h6>
+                {{ isEdit ? 'Altere os campos abaixo para editar os dados do usuário.' : isReadOnly ?
+                'Detalhes do usuário cadastrado.' : 'Preencha os campos abaixo para cadastrar seus dados.' }}
+            </h6>
         </div>
 
         <div class="row">
@@ -62,7 +67,7 @@
         </div>
     </div>
 
-    <div class="container-wrap mb-5">
+    <div class="container-wrap">
         <div class="mb-4">
             <h4>Endereço</h4>
         </div>
@@ -179,11 +184,12 @@
         </div>
     </div>
 
-    <div class="d-flex justify-content-end me-3 mb-3">
+    <div class="d-flex justify-content-end me-3 mb-5">
         <button class="btn btn-secondary"
                 routerLink="/usuarios"
                 type="button">Voltar</button>
         <button class="btn btn-primary ms-2"
+                *ngIf="!isReadOnly"
                 type="submit">Salvar</button>
     </div>
 
